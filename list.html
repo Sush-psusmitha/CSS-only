@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+
+      <style>
+            ul li{
+                 list-style-type: decimal; 
+                 list-style-type: square;  
+                 list-style-type: upper-roman;  
+                 list-style-type: lower-greek;  
+                 list-style-type: lower-roman;  
+                 list-style-type: lower-alpha;  
+                 list-style-type: decimal-leading-zero;  
+                 list-style-type: disc;  
+                 /* list-style-image: url('./images/2illus.png');  */
+                 list-style-type: none;
+                  }
+            ul li::before{
+                  content: '';
+                  display: inline-block;
+                  background-color: rgb(65, 121, 9); 
+                  width: 10px;
+                  height: 10px;
+                  margin-right: 7px;
+         
+            }
+            ol li{
+                  list-style-type: none;
+            }
+
+            ol li::before{
+                  content: '';
+                  display: inline-block;
+                  margin-right: 10px;
+                  height:8px;
+                  width: 8px;
+                  background-color: crimson;
+                  background-image: url('./images/heart.png');
+                  background-size: cover;
+            }
+                  
+
+      </style>
+</head>
+<body>
+      <h1>List Properties in html</h1>
+      <ul>
+            <li>Home</li>
+            <li>about</li>
+            <li>blog</li>
+            <li>contact</li>
+            <li>download</li>
+      </ul>
+
+      <ol>
+            <li>one</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+            <li>Six</li>
+      </ol>
+</body>
+</html>
