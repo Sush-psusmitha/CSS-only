@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Table and Display-table</title>
+      <style>
+            table{
+                  border-collapse: collapse;
+            }
+             
+            table tr:nth-of-type(even){
+                  background-color: aqua;
+            }
+            /* below for display table property */
+            .table{
+               margin-top: 20px;
+                display: table; 
+               width: 300px;    
+               
+            }
+            .row{
+                  display: table-row;  /* act as a table row */
+            }
+            .col{
+                  display: table-cell;
+                  padding: 14px 30px;
+                  border: 1px solid orangered;
+            }
+            .header{
+                  display: table-header-group;
+                  font-weight: 800;
+                  background-color:orangered;
+                  color: white;
+            }
+            .footer{
+                  display: table-footer-group;
+            }
+            .caption{
+                  display: table-caption;
+                  font-style: italic;
+                  text-align: center;
+                  margin-bottom: 10px;
+                  font-weight: 600;
+            }
+            .col-grp{
+                  display: table-column-group;
+            }
+            .col{
+            display: table-cell;
+            width: 230px;
+            }
+            
+      </style>
+</head>
+<body>
+       <h1>Table</h1> 
+       <caption>Detail table</caption>
+       <colgroup>
+            <!-- we can change only width and height and bg color -->
+         <col style="width: 50px">
+         <col style="width: 50px">
+         <col>
+      </colgroup>
+       <table cellspacing="6px" cellpadding="13px" border="1px">
+            <thead>
+                 <tr>
+                  <th>NAME</th>
+                  <th>AGE</th>
+                  <th>CITY</th>
+            </tr>
+            </thead>
+           <tbody>
+                <tr>
+                  <td>Shake</td>
+                  <td>22</td>
+                  <td>Mumbai</td>
+            </tr>
+            <tr>
+                  <td>Raani</td>
+                  <td>26</td>
+                  <td rowspan="3">Dheli</td>
+            </tr>
+            <tr>
+                  <td>Raju</td>
+                  <td>21</td>
+                  
+            </tr>
+            <tr>
+                  <td>Sushmitha</td>
+                  <td>27</td>
+                  
+            </tr>
+           </tbody>
+           <tfoot>
+            <tr>
+                  <td colspan="3">prepared by sushmitha</td>
+            </tr>
+           </tfoot>
+           
+       </table>
+
+       <h2>Display table</h2>
+       <div class="table">
+            <div class="caption">class XII details</div>
+            
+            <div class="col-grp">
+                  <div class="col">Col-1</div>
+                  <div class="col two">Col-2</div>
+                  <div class="col">Col-2</div>
+            </div>
+
+            <div class="header">
+            <div class="row">
+                  <div class="col">Name</div>
+                  <div class="col">Age</div>
+                  <div class="col">City</div>
+            </div>
+            </div>
+            <div class="row">
+                  <div class="col">sush</div>
+                  <div class="col">21</div>
+                  <div class="col">Bengalure</div>
+            </div>
+            <div class="row">
+                  <div class="col">sush</div>
+                  <div class="col">21</div>
+                  <div class="col">Bengalure</div>
+            </div>
+            <div class="row">
+                  <div class="col">sush</div>
+                  <div class="col">21</div>
+                  <div class="col">Bengalure</div>
+            </div>
+            <div class="footer">
+            <div class="row">
+                  <div class="col">Total</div>
+                  <div class="col"></div>
+                  <div class="col">4</div>
+            </div>
+            </div>
+       </div>
+</body>
+</html>

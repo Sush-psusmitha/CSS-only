@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Display properties in css</title>
+      <style>
+            h1,p{
+                  background-color: blue;
+            }
+            b{
+              background-color: rgb(172, 110, 16);           
+            }
+
+
+				/* .list{
+            display: flex;
+				justify-content: center;
+				list-style-type: none;
+				background-color: rgb(209, 155, 155);
+				}
+				ul li {				
+				margin-left: 50px ;
+				} */
+
+				ul li {
+					display: inline;
+					background-color: blueviolet;
+					margin-right: 20px;
+					padding: 10px;
+				}
+      </style>
+</head>
+<body>
+      <h1>Display properties in css</h1>
+      <ul class="list">
+            <li>ojgshkdj</li>
+            <li>ojgshkdj</li>
+            <li>ojgshkdj</li>
+            <li>ojgshkdj</li>
+      </ul>
+      <p>Lorem ipsum <b>dolor sit amet</b> consectetur adipisicing elit. Excepturi, libero.</p>
+		<div style="display: inline-block; width: 100px; height: 50px; background-color: chartreuse;">Box 1</div>
+<div style="display: inline-block; width: 100px; height: 50px; background-color: chartreuse;">Box 2</div>
+ 
+<div style="display: contents;">
+  <p>This behaves like no parent!</p>
+</div>
+
+</body>
+</html>
