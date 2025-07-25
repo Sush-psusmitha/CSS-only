@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Parent and child in CSS</title>
+      <style>
+             body{
+                  color: rgb(243, 108, 12);
+             }
+             div{
+                  color: rgb(14, 47, 230);
+             }
+             p{
+                  color: rgb(243, 27, 56);
+             }
+      </style>
+</head>
+<body>
+      <h2>heading1</h2> 
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, iste?</p> 
+            <div>
+                  <h3>Heading 2</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, praesentium!</p>
+            </div>
+      
+      <h4>Heading 4</h4> 
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, itaque.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, itaque.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, itaque.</p>
+      <b>body parent > h2,p,div,h4,p (direct childs) inside div(h3 p ) are grand chikd to body</b>
+
+      <!-- style preferencess -->
+      <h2>Style preferencess</h2>
+      <p><b>ID - first preference(ID selector)</b></p>
+      <p><b>Class - second preference(class selector)</b></p>
+      <p><b>tag - third preference (elememt selector)</b></p>
+      <p>!important - kw has first priority amoung all</p>
+
+      <h3>Multiple selectors</h3>
+      <p>if same styles for elements so, by<br>
+        h1,h3,p, .box, #id{
+            color : #000000;  
+        }
+        <br>
+        all the childs  under box class
+        .box p{
+            background-color: yellow;  under box class all child
+        }
+        <br>
+        .box > p{
+            color: #ccccc;
+        }
+
+      </p>
+</body>
+</html>
