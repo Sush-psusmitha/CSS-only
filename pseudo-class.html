@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Pseudo class in css</title>
+ 
+      <style>
+            a{
+                  color: black;
+            }
+            a:hover{
+                  color: chartreuse;
+            }
+            /* click chesinapu */
+            a:active{
+                  color: crimson;
+            }
+            /* link lopala navigate ayina tharvatha */
+            /* a:visited{
+                  color: forestgreen;
+            } */
+      </style>
+
+      <!-- accessing child -->
+       <style>
+            ul li:first-child{
+                  background-color: blue;
+            }
+            ul li:last-child{
+                  background-color: rgb(0, 255, 68);
+            }
+            ul li:nth-child(3){
+                  background-color: rgb(255, 0, 106);
+            }
+            ul li:nth-child(even){
+                  background-color: rgb(255, 89, 0);
+            }
+            ul li:nth-child(odd){
+                  background-color: rgb(217, 255, 0);
+            }
+       </style>
+       <!-- border radius -->
+        <style>
+            .box{
+                  width: 200px;
+                  height: 150px;
+                  margin: 0 auto;
+                  background: linear-gradient(#e67e22,#e74c3c);
+                  /* border-radius: 10px;
+                  border-radius: 150px;
+                  border-radius: 50%; */
+                  /* border-top-left-radius: 20px;
+                  border-bottom-left-radius: 20px;
+                  border-bottom-right-radius: 20px; */
+                  border-radius: 20px 0px 20px 0px;
+            }
+        </style>
+       <!-- Box shadwo -->
+        <style>
+         .box1{
+             height: 150px;
+             width: 150px;
+             text-align: center;
+             background: #e74c3c;
+             margin: 0 auto;
+         }
+             /* horizontal-offset, vertical off-set, dencity(blurness),spreading */
+         .shadow{
+            box-shadow: 10px 10px 6px 0px rgba(0,0,0,0.15);
+         }
+        </style>
+
+</head>
+<body>     
+      <h1>Pseudo class in css</h1>
+      <a href="border.html" title="link1">Link1</a>
+      <a href="display.html" title="link2">Link2</a>
+      <a href="list.html" title="link3">Link3</a>
+
+      <hr>
+      <h2>Acessing Child in CSS </h2>
+
+      <ul>
+            <li>sushmitha tech 1</li>
+            <li>sushmitha tech 2</li>
+            <li>sushmitha tech 3</li>
+            <li>sushmitha tech 4</li>
+            <li>sushmitha tech 5</li>
+      </ul>
+      <hr>
+
+      <h2>Border Radius in Css</h2>
+      <div class="box"></div>
+      <hr>
+
+      <h3>Box Shadow in Css</h3>
+      <div  class="box1 shadow"></div>
+      <div style="margin-top: 300px;"></div>
+</body>
+</html>

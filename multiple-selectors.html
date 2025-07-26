@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Multiple Selectors </title>
+        <style>
+            /* inside div all p */
+             /* .box p{
+                color: red;
+               } */
+               /* inside div direct child p */
+               /* .box > p{
+                  color: blueviolet;
+               } */
+               /* after div's block 1st p tag */
+               .box + p{
+                  color: orange;
+               }
+               /* div tag's has id attribute */
+               div[id]{
+                  background-color:blue;
+               }
+               /* div tag lo class attribue unte */
+               /* div[class]{
+                background-color: chartreuse;
+               } */
+               /* p tag lo class attribute value gani bgcolor ayithey */
+                p[class ="bgcolor"]{
+                background-color: rgb(0, 217, 255);
+               }
+              
+              
+               /* if oka tag lo multiple class unai anuko, below class ki style apply avali ante ~ petali */
+               /* inner-box class naem bg color will change, but if we gave text-white to the same tag
+                which inner-box class name exixits, bg color wont apply to apply bg we give ~ before =
+               
+               */
+               div[class ~='inner-box']{
+                  background-color: burlywood;
+               }
+               .text-white{
+                  color: white;  
+               }
+
+               div[class ~="three"]{
+                  color: rgb(212, 40, 40);
+               }
+               .para{
+                  background-color: aqua;
+               }
+               /* a tag lo title arrtibute unte */
+               a[title]{
+                  color: rgb(8, 104, 10);
+               }
+              /* href attribute lo logo.png unte */
+               a[href='logo.png']{
+                  color: orangered;
+               }
+                /* a tag href attribute lo test ani start - ^  */
+               a[href ^="test"]{
+                 background-color: rgb(224, 171, 106);
+               }
+
+               /* a tag href attibute lo ending # unte  - $  */
+               a[href $="#"]{
+                  color: deeppink;
+               }
+               a[href $= "html"]{
+                  color: darkred;
+               }
+               
+        </style>
+
+</head>
+<body>
+      <h1>More Selectos properties in Css</h1>
+      
+      <div class="box bgcolor">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, dolorum!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, dolorum!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, dolorum!</p>
+     
+         <div class="inner-box text-white">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, modi!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, modi!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, modi!</p>
+         </div>
+      </div>
+      <div id="id">
+            <h4>This is ID</h4>
+      </div>
+      <p class="bgcolor">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, voluptas.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, voluptas.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, voluptas.</p>
+
+      <!-- /* if oka tag lo multiple class unai anuko, below class ki style apply avali ante ~ petali */ -->
+      <!-- Using ~ symbol for apply styles though multiple class have in that tag -->
+
+
+      <div class="three para">
+            <p>Lorem ipsum dolor sit amet.</p>
+
+            <p><b>multiple class unna kuda ~symbol peti oka class ki style chesth like this  div[class ~="three"]{
+                  color: rgb(212, 40, 40);
+               } this will apply in anycase </b></p>
+      </div>
+
+      <h4>using an attribute for styling</h4>
+      <a href="test.html" title="Link1">Link1</a>
+      <a href="test.png" title="Link1">Link1</a>
+      <a href="logo.png" title="Link2">Link2</a>
+      <a href="#">Link3</a>
+      <br>
+      <a href="text1.html">html page</a>
+      <a href="text2.html">html page</a>
+      <a href="text3.html">html page</a>
+      
+</body>
+</html>
