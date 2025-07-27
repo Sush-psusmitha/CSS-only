@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sticky Sidebar Example</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    #header, #footer {
+      text-align: center;
+      font-size: 29px;
+      font-weight: bold;
+      color: #170707;
+      padding: 40px;
+      background-color: chartreuse;
+    }
+
+    #header {
+      height: 100px;
+    }
+
+    #footer {
+      height: 250px;
+    }
+
+    #navbar {
+      position: sticky;
+      top: 0;
+      background-color: chocolate;
+      z-index: 1000;
+    }
+
+    #navbar ul {
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    #navbar ul li {
+      list-style: none;
+      padding: 20px;
+      color: white;
+      font-size: large;
+    }
+
+    .content-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
+      gap: 30px;
+      background: #f2f2f2;
+    }
+
+    #box {
+      width: 70%;
+      padding: 20px;
+      background: white;
+      text-align: justify;
+      line-height: 1.5rem;
+    }
+
+    #sidebar {
+      width: 30%;
+      padding: 14px;
+      background-color: blueviolet;
+      position: sticky;
+      top: 120px;
+      align-self: flex-start;
+    }
+
+    #sidebar ul li {
+      font-size: 20px;
+      list-style: none;
+      color: white;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div id="header">Header</div>
+
+  <div id="navbar">
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Products</li>
+      <li>Menu</li>
+      <li>Downloads</li>
+    </ul>
+  </div>
+
+  <div class="content-wrapper">
+    <div id="box">
+      <!-- Long text content -->
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas impedit maiores earum non fugit quae nesciunt a id. Natus, in commodi reiciendis expedita nostrum fugit velit repellat non nulla. Laudantium ipsa eveniet suscipit doloremque iusto voluptas rem ducimus officiis, iste odio error eum, ad similique alias accusamus temporibus et itaque consequuntur modi perspiciatis vitae. Mollitia tenetur laborum blanditiis adipisci. Cum delectus alias distinctio veritatis totam ut laborum voluptatem, laudantium quas, praesentium quasi quaerat aliquam explicabo perferendis obcaecati eum provident magni! Ex, vero? Minus maiores quis assumenda laboriosam facilis repellat sunt, perferendis unde natus provident tempore nobis quae dolores eos dolor placeat similique quas ipsam accusantium commodi. Officia ex, quo eveniet aliquid suscipit quasi? Voluptates eum numquam quo perspiciatis ea tempore consequuntur voluptatibus, ullam doloremque, saepe dolorum iste blanditiis iusto. Sit nobis quas, corrupti deserunt, culpa vitae repellendus rem dolorem quo voluptate tenetur quaerat itaque id doloribus molestias quos aspernatur dignissimos cupiditate eius nostrum illum. Praesentium, eaque aspernatur! Nobis aut, incidunt sit molestiae quas soluta tempora dignissimos atque nesciunt fuga quia enim quos, facilis hic delectus perferendis voluptates reiciendis libero magni ratione. Quis nesciunt excepturi, in assumenda unde officia praesentium. Officiis alias sed corrupti illum, repellendus quisquam placeat asperiores aperiam accusamus expedita exercitationem. Earum, similique quia, incidunt voluptatum esse, nobis voluptate quasi dolores commodi necessitatibus eaque quis qui quas deleniti officiis eum impedit nemo. Saepe rem error dolore eligendi optio, sint vitae laboriosam, iure impedit adipisci fugit tempora, quam animi unde. Similique, autem rerum fuga temporibus repudiandae dolores asperiores optio reiciendis minus aut quas labore esse assumenda laudantium minima! Repudiandae et sed sapiente qui nulla! Officiis quos nobis minus asperiores iure officia eligendi dolorum necessitatibus quis voluptatum! Autem architecto porro tempore soluta, non aliquam impedit tempora rem quisquam, hic, accusantium corrupti rerum aperiam fugit. Recusandae sit iste dolore accusamus, nihil fuga.</p>
+    </div>
+
+    <div id="sidebar">
+      <ul>
+        <li>Article 1</li>
+        <li>Article 2</li>
+        <li>Article 3</li>
+        <li>Article 4</li>
+        <li>Article 5</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="footer">This is footer</div>
+</body>
+</html>

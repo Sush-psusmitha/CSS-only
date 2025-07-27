@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>min and max width</title>
+      <style>
+            h1{
+                  text-align: center;
+            }
+            .main{
+                  background-color: aqua;
+                  padding: 1rem;
+                  max-width: 1000px;
+            }
+            .main p {
+                  padding: 1rem;
+                  margin: 1rem auto;
+                  background-color: white;
+            }
+            .main p:nth-child(1){
+                  /* mini-500 paina shrink avuthu untadhi
+                    500 lopala avadhu
+                  */
+                 min-width: 500px;  
+            }
+            .main p:nth-child(2){
+                  /* 600 lopala dhaka shirk audhi 
+                    600 paina poothey avadhu
+                  */
+              max-width: 800px;
+            }
+      </style>
+</head>
+<body>
+      <header>
+            <h1>min and max width</h1>
+            <p><b>min-width : minimum value paina dhaka pothey ne shrink avudhi</b></p>
+            <p><b>max-width : max value lopla variki shrink avudhi paina avadhu</b></p>
+            | Property     | Meaning                                    |
+| ------------ | ------------------------------------------ |
+| `min-width`  | Element **won’t shrink below** this width  |
+| `max-width`  | Element **won’t grow beyond** this width   |
+| `min-height` | Element **won’t shrink below** this height |
+| `max-height` | Element **won’t grow beyond** this height  |
+
+      </header>
+
+      <p>
+            1. min-width: 
+if parent 1000px, min-500 isthey , above 500 it will shrink , but bleow it wont shrink. 
+
+2. max-width: 
+
+if parent 1000px, max-500 isthey, 500 lopala variki shrink avudhu cant grow beyond 500. 
+
+3. min-height: 
+  won't shrink below this height grow above. 
+4. max-height: 
+   above won't shrink, below avudhi
+
+===========================
+
+min height / min width:  <br>
+   won't shrink below the specified value , above it will shrink.  <br>
+
+max height / max width: <br>
+  won't shrink above the specified value , will shrink below the specified value  <br>
+
+  <p>| Property     |          Meaning          <br>                           |
+| ------------ | ------------------------------------------ | <br>
+| `min-width`  | Element **won’t shrink below** this width  |<br>
+| `max-width`  | Element **won’t grow beyond** this width   |<br>
+| `min-height` | Element **won’t shrink below** this height |<br>
+| `max-height` | Element **won’t grow beyond** this height  |<br>
+</p>
+   
+      </p>
+      <div class="main">
+           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda fugit dignissimos maiores non vitae, neque reprehenderit dolores tempore accusamus velit reiciendis est fugiat eius, quidem facilis doloremque corporis cum ut molestias! Eligendi explicabo dolorum id reprehenderit dolor rem omnis vero nemo iure quod illum ullam eos officiis possimus, iusto vitae facilis nam reiciendis quibusdam vel tempora sit veniam fugit est? Qui ratione, molestias ea explicabo amet, inventore consectetur eum recusandae illum id laboriosam cum necessitatibus! Similique ratione cupiditate sequi quae officiis, corporis debitis et. Illo laudantium, aperiam quos dignissimos recusandae tempora consequuntur suscipit dolores cumque atque eos earum harum mollitia.Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto labore possimus nemo iste deserunt illo doloribus minus, ipsa excepturi asperiores!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae maxime atque porro cumque totam ipsum aut ducimus illum in odio?</p>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolorem explicabo ea laboriosam, tempore fugit tenetur sunt saepe vel? Reprehenderit corporis beatae, officiis dolorum tempora doloribus atque adipisci numquam deserunt molestias inventore quaerat temporibus omnis ducimus voluptatibus distinctio quas, cum ratione nam, deleniti fuga accusantium maxime corrupti et. Quas, tempore!Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio modi iste hic amet? Itaque, repellendus dolor nobis quis recusandae sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae maxime atque porro cumque totam ipsum aut ducimus illum in odio?</p>
+      </div>
+      
+</body>
+</html>
