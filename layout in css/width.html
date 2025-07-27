@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Width in CSS</title>
+     
+      <style>
+
+            div{
+                border: 3px solid red;  
+                padding: 10px;
+                background-color: aquamarine;
+                max-width: 900px;
+                
+            }
+            div p:nth-child(1){
+                  min-width: 600px;
+            }
+            div p:nth-child(2){                
+                  max-width: 600px;
+            }
+            /* div img{
+               max-width: 500px;
+            } */
+            img{
+                   width: 100%;  
+                   max-width: 500px;
+            }
+     </style>
+</head>
+<body>
+      <h2>Width in CSS</h2>
+
+      <p><b>ikada img parent div ki max-800px ichina, so img lo width 100% ichinam so, 800 lopala variki 100% thiskuntadhi grwo avudhi above depends on parent , parent ki change chesthey adhi prakaram  </b></p>
+      <div>
+            <img src="../images/jerry.jpg" alt="">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates eligendi, qui maxime doloremque, dolorum maiores tempore harum quisquam minus commodi dignissimos temporibus quibusdam, cum fugiat provident soluta nam. Fugiat blanditiis nesciunt autem voluptas, impedit, dignissimos omnis repellat libero perferendis cumque eaque! Omnis impedit error, repudiandae quisquam dolor laboriosam molestiae numquam dolorem veritatis et quasi provident officiis quo ut, dolorum unde consequuntur. Repudiandae ab sapiente, quasi quis expedita repellat magnam quo obcaecati commodi, ut doloribus laborum aut consequatur officia accusamus quos.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates eligendi, qui maxime doloremque, dolorum maiores tempore harum quisquam minus commodi dignissimos temporibus quibusdam, cum fugiat provident soluta nam. Fugiat blanditiis nesciunt autem voluptas, impedit, dignissimos omnis repellat libero perferendis cumque eaque! Omnis impedit error, repudiandae quisquam dolor laboriosam molestiae numquam dolorem veritatis et quasi provident officiis quo ut, dolorum unde consequuntur. Repudiandae ab sapiente, quasi quis expedita repellat magnam quo obcaecati commodi, ut doloribus laborum aut consequatur officia accusamus quos.</p>
+      </div>
+</body>
+</html>

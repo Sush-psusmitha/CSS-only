@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Box-sizing in CSS</title>
+
+      <style>
+            div{
+                  border: 5px solid orange;
+                  width: 300px;
+                  min-height: 300px;
+                  padding: 5px;
+                 
+                  box-sizing: content-box;
+            }
+      </style>
+</head>
+<body>
+      
+      <h2>Box-sizing in CSS</h2>
+      <p><b>content-box : if padding, border given , width also takes that like ( width:100px , p-10px, border-10px = now total width will be 120px)  in this extra space will create and increase the width</b></p>
+      <p><b>border-box : though if we take padding and border, eg: (width: 100px, p-10,border-10) = now total width will be 80 bcz, we gave 10 for border and padding. maintain the same width padding and border also will include </b></p>
+      <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolor, debitis illo nesciunt fugit accusamus quam itaque suscipit praesentium deleniti nulla delectus inventore voluptate asperiores iusto modi quod! Optio eius explicabo aperiam eum adipisci. Distinctio, doloremque a quod atque laboriosam necessitatibus ut corrupti excepturi repellat, suscipit reprehenderit dolorum cupiditate est!
+      </div>
+</body>
+</html>
