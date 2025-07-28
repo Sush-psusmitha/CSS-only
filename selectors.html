@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Different Types of selectors</title>
+
+      <style>
+            /* descendant selector[parent' child] */
+            .box p{
+                  color: blue;
+            }
+            .box p span{
+                  color: rgb(0, 255, 72);
+                  font-weight: 900;
+            }
+            /* direct child [ not include the grand childs] */
+            .box > p{
+                  color: rgb(225, 18, 190);
+            }
+            /* adjuscent sibling - box's next element */
+            .box + p{
+              background-color: aqua;
+            }
+            /* General sibilings - direct sibiling elements to box  */
+            .box ~ p {
+                 color: crimson;
+            } 
+
+            :root{
+                  --bg-color : yellow; 
+                  --font-size-20 : 20px;
+                  --txt-color: rgb(255, 47, 0);
+            }
+            /* .pesdu{
+                  color: var(--txt-color);
+                  font-size: var(--font-size-20);
+                  background-color: var(--bg-color);
+                
+            } */
+            .pesdu p:nth-child(2n){
+                  background-color: rgb(131, 132, 156);
+            }
+
+            /* without parent  we can select*/
+            li:nth-of-type(odd){
+                  background-color: chartreuse;
+            }
+            li:nth-last-of-type(2){
+                  background-color: rgb(238, 0, 255);
+            }
+            li:only-child{
+                  background-color: cornflowerblue;
+            }
+
+          .tar p{
+                  padding: 10px;
+                  background-color: brown;
+            }
+           .tar p:target{
+                  background-color: chartreuse;
+            }
+    /* ==================== pesudo ================== */
+      </style>
+</head>
+<body>
+      <!-- 
+         1. simple selectors:  element / id / class/ universal
+         2. Combinators Selectors : Descendant / direct child / adjacent siblings
+         3. attribute selectors
+         4. pseudo Class selectors 
+         5. Peseudo element selectors 
+
+         :root - presserve varibleabe and can reuse. 
+
+      with parent   
+         :first-child - first child of a parent
+         :last-child - last child of a parent
+         :nth-child() - by giving number inside the () we can select, must have parent , and aslo give 2n, 2n+1
+         :nth-last-child() - selects the last child
+      ========================
+      without parent we can directly selcet:
+          :nth-of-type()  - by specifying the number inside () we can select
+          :nth-last-of-type() -   selects the last child without parent
+      ========================
+         
+          :only-child() - must have parent, if any parent has one child this will work
+          :only-of-type() - without parent but it must be a single elemnet no repeated
+      ========================      
+    
+            :first-of-type() - with or without parent we can select the first child
+            :last-of-type() - with or without parent we can select the last child
+      =========================  
+      
+            :empty - select only the empty elements eg: <p></p>
+           
+            :not() - selects the element which class name given inside (). eg: p:not(.para){color:red} 
+              - this apply which p element doesnt have .para class. 
+          
+            :lang() -by specifying the language inside the () for that lang attribute those styles will apply.
+           
+            :link | :visited | :active | :hover | 
+            :focus  - eg: input box lo input ni focus chesetapud particular border apply avvali, 
+                     in  first outline none ichesi then border isthey. 
+
+            :target - link click chesthye a particular id match aye elemetn ki styles apply avthai 
+               <a href="#p1">para1</a> - e id una element ki styles apply avadhi. a input lo cursor petinapudu style apply avudhi.
+      
+      
+      
+            -->
+
+<div class="box">
+      <p>Lorem ipsum dolor sit <span>sushmithaaaaaaa </span>amet consectetur adipisicing elit. Tenetur exercitationem deleniti, eligendi totam sunt ipsa?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur exercitationem deleniti, eligendi totam sunt ipsa?</p>
+     <div class="inner-box">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste recusandae porro perspiciatis perferendis, voluptatibus nihil!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste recusandae porro perspiciatis perferendis, voluptatibus nihil!</p>
+      </div> 
+</div>
+<p> 2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, velit in ex hic nesciunt itaque.</p>
+<p>2 . Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, velit in ex hic nesciunt itaque.</p>
+<div class="box2">
+     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet ad dicta vel, veniam possimus?</p>
+<!-- =================================== -->
+
+  <div class="pesdu">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis natus unde qui exercitationem numquam veniam itaque ab, voluptate asperiores rem!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis natus unde qui exercitationem numquam veniam itaque ab, voluptate asperiores rem!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis natus unde qui exercitationem numquam veniam itaque ab, voluptate asperiores rem!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis natus unde qui exercitationem numquam veniam itaque ab, voluptate asperiores rem!</p>
+  </div>
+  <ul>
+      <li>item-1</li>
+      <!-- <li>item-2</li>
+      <li>item-3</li>
+      <li>item-4</li>
+      <li>item-5</li> -->
+  </ul>
+
+  <!-- ================== :target ============ -->
+   <h3>:target - link click chesthye a particular id match aye elemetn ki styles apply avthai</h3>
+<div class="tar">
+
+
+   <a href="#p1">para1</a>
+   <a href="#p2">para2</a>
+
+   <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, quas!</p>
+   <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, quas!</p>
+</div>
+
+</div>
+</body>
+</html>
