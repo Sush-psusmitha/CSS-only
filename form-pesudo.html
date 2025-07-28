@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Form Peseudo class selectors</title>
+
+      <style>
+            #txt:focus{
+                  outline: none;
+                  background-color: rgb(180, 233, 233);
+            }
+            input[type="checkbox"]:checked{
+              box-shadow: 0 0 0 3px green;
+            }
+
+            input[type="text"]:enabled{
+                  background-color: aqua;
+            }
+            input[type="text"]:disabled{
+                  background-color: rgb(255, 0, 0);
+            }
+            input[type="text"]:required{
+                  background-color: rgb(30, 255, 0);
+            }
+
+            input[type="email"]:read-only{
+                   background-color: antiquewhite;   
+            }
+            input[type="email"]:read-write{
+                   background-color: rgb(250, 215, 246);   
+            }
+
+             input[type="text"]:valid{
+                  outline: none;
+                  border-color: green;
+            }
+             input[type="text"]:invalid{
+                  outline: none;
+                  border-color: red;
+            }
+            input[type="radio"]:default{
+                 box-shadow: 0 0 0 2px blue;
+            }
+
+      </style>
+</head>
+<body>
+     <h1>Form Peseudo class selectors</h1> 
+     <span>:Focus - </span><input type="text" id="txt">
+   
+     <hr>
+     <span>:checked - </span>
+       <input type="checkbox" id="cricket">
+       <label for="cricket">Sushmitha</label>
+       <input type="checkbox" id="cricket">
+       <label for="cricket">Sush</label>
+       <input type="checkbox" id="cricket">
+       <label for="cricket">Amulu</label>
+
+         <hr>
+     <span>:enabled | :disabled | :required | :optional - </span> <br>
+     <input type="text" id="txt2" placeholder="enabled"> <br>
+     <input type="text" id="txt2" disabled placeholder="disabled"> <br>
+     <input type="text" id="txt2" required placeholder="required"> <br>
+     <hr>
+     
+     <span>:read-only | :read-write</span><br>
+     <!-- default read-write -->
+     <input type="email"  placeholder="read and wirte">
+     <input type="email" readonly placeholder="readonly">
+     <hr>
+     <span>:valid | :invalid</span> <br>
+     <input type="text" placeholder="Your Name in smallcase" pattern="[a-z]*">
+     <hr>
+      <span>:default - which is the default value that onlu those styles will apply</span> <br>
+      <input type="radio" name="gen" id="male"  checked>
+      <label for="male">Male</label> 
+      <input type="radio" name="gen" id="female">
+      <label for="female">Female</label>
+</body>
+</html>
