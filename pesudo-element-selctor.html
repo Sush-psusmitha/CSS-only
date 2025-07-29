@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Pesudo Element Selector</title>
+      
+      <style>
+            input::placeholder{
+                  color: rgb(101, 187, 14);
+            }
+
+            p::selection{
+                  color: blue;
+                  background-color: aqua;
+            }
+            p::first-letter{
+                  font-weight: bold;
+                  color: rgb(168, 13, 13);
+            }
+            p::first-line{
+                  color: chocolate;
+            }
+            .box{
+                  height: 200px;
+                  width: 400px;
+                  background-color: rgb(198, 126, 18);
+                  position: relative;
+            }
+            .box::before{
+                  content: "";
+                  width: 100%;
+                  height: 30px;
+                  background-color: rgb(129, 255, 127);
+                  position: absolute;
+                  top: 0;
+                  
+            }
+            .box::after{
+                  content: "";
+                  width: 100%;
+                  height: 30px;
+                  background-color: rgb(129, 255, 127);
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  
+            }
+      </style>
+</head>
+<body>
+            
+            <div class="box">Pesudo Elements
+             
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, beatae? Odio vitae corporis assumenda similique nulla fugiat atque placeat nihil. Amet quibusdam ex ea nisi? Labore, sint minima. Illo, earum?</p>
+              
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ipsam eos id. In nihil minima hic. Reiciendis iste accusantium odio?</p>
+
+            <input type="text" name="" placeholder="Name" id="">
+      <!-- 
+        ::before
+        ::after
+        ::first-letter
+        ::first-line
+        ::selection
+        ::placeholder
+      -->      
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>:is() - Pseudo Class Selector</title>
+
+      <style>
+            #d1 h2, #d2 h2 {
+                  color: rgb(213, 143, 37);
+            }
+            :is(#d1,#d2) h3{
+                  color: rgb(8, 0, 255);
+            }
+            :is(#d1,#d2) p{
+                  color: rgb(6, 94, 94);
+            }
+            :is(#d1,#d2) h2:hover {
+                  background-color: rgb(21, 255, 0);
+            }
+            :is(#d1,#d2) :is(h3,p):hover{
+                  font-weight: bold;
+            }
+      </style>
+</head>
+<body>
+      <h1>:is() - Pseudo Class Selector</h1>
+
+      <div id="d1">
+            <h2>H2 - heading</h2>
+            <h3>H3 - heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id autem tempora enim corrupti nobis perferendis! Eveniet facere praesentium adipisci, a, aperiam id incidunt hic quae omnis blanditiis ratione odit quidem.</p>
+            <h4>H4 - heading</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos doloremque illo omnis voluptas eaque obcaecati. Porro sapiente ab veritatis est?</p>
+      </div>
+
+      <div id="d2">
+         <h2>d1 H2 - heading</h2>
+         <h3>d1 H3 - heading</h3>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore odit magni culpa modi nam accusantium ipsam dolorum ipsum totam error.</p>
+
+      </div>
+      <p><b>outer</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nisi enim! Placeat, provident deleniti? Odio qui adipisci molestias nostrum quisquam?</p>
+</body>
+</html>
