@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Flex box in css</title>
+      <style>
+           .container{
+            width: 400px;
+            height: 400px;
+            padding: 10px;
+            background-color: cornflowerblue;
+            display: flex;
+            gap: 5px;
+
+            /* flex-direction: row; */
+            /* flex-direction: row-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse;
+             flex-direction: row; */
+           }
+           .box1{
+            color: white;
+            height: 75px;       
+            width: 75px;
+            background-color: crimson;
+            order: 3;
+           }
+           .box2{
+            order: 1;
+            color: white;
+            height: 75px;
+            width: 75px;
+            background-color: rgb(220, 20, 213);
+           }
+           .box3{
+            order: 2;
+            color: white;
+            height: 75px;
+            width: 75px;
+            background-color: rgb(20, 220, 73);
+           }
+          
+           /* .box4{
+            color: white;
+            height: 75px;
+            width: 75px;
+            background-color: rgb(220, 187, 20);
+           } */
+           /* .box5{
+            color: white;
+            height: 75px;
+            width: 75px;
+            background-color: rgb(20, 187, 220);
+           }
+           .box6{
+            color: white;
+            height: 75px;
+            width: 75px;
+            background-color: rgb(140, 20, 220);
+           } */
+      </style>
+</head>
+<body>
+      <h1>Flex box in Css</h1>
+
+      <div class="container">
+            <div class="box1">box1</div>
+            <div class="box2">box2</div>
+            <div class="box3">box3</div>
+            <!-- <div class="box4">box4</div> -->
+            <!-- <div class="box5">box5</div>
+            <div class="box6">box6</div> -->
+                  </div>
+
+                  <p><b>note: if we give one box only order value, it will go to last bcz others we dint specify the order</b></p>
+</body>
+</html>
