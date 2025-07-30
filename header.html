@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple header stylings</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+         header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: cornflowerblue;
+            padding: 25px 7%;
+         }
+         .logo{
+            font-size: 23px;
+            color: rgb(185, 12, 12);       
+         }
+         .logo:hover{
+            cursor: pointer;
+         }
+         .nav-links{
+            display: flex;
+            list-style-type: none;
+         }
+         .nav-links li{
+            padding: 0 22px;
+         }
+        .nav-links li a{
+          color: rgb(11, 57, 239);
+          text-decoration: none;
+           transform: 1s;
+        }
+        .nav-links li a:hover{
+           font-weight: 600;
+           color: rgb(8, 98, 171);
+        }
+
+        button{
+            padding: 10px 23px;
+            border: none;
+            font-weight: 700;
+            background-color: rgb(233, 168, 83);
+            color: white;
+            border-radius: 50px;
+            transform: 0.6s;
+        }
+         button:hover{
+            cursor: pointer;
+              background-color: rgb(239, 140, 11);
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="logo">Sush's Resorts</h2>
+        <nav>
+            <ul class="nav-links">
+               <li><a href="">Home</a></li>
+               <li><a href="">Product</a></li>
+               <li><a href="">Pricing</a></li>
+               <li><a href="">Services</a></li>
+            </ul>
+        </nav>
+        <button>Contact Us</button>
+    </header>
+
+    <main>
+        usual navbar
+    </main>
+</body>
+</html>
