@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+       }
+       body{
+        background-color: rgb(46, 46, 66);
+       }
+       h1{
+        color: azure;
+        text-align: center;
+        margin-top: 80px;
+       }
+       nav{
+        margin-top: 150px;
+        text-align: center;
+       }
+       nav ul{
+        list-style: none;
+        display: inline-block;
+        transform: skew(-25deg);
+       }
+       nav ul li{
+        background-color: azure;
+        float: left;
+        border: 1px solid #eee;
+        color: #00000055;
+        text-transform: uppercase;
+        font-weight: 400;
+        box-shadow: 1.95px 1.95px 2.6px rgba(0,0,0,1);
+        transition: all 0.3s linear;
+       }
+       nav ul li:hover{
+         background-color: #0984e3;
+         color: #ffffff;
+         outline: none;
+       }
+       nav ul li a{
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: inherit;
+        transform: skew(25deg);
+        
+       }
+       nav ul li:first-child{
+        border-radius: 7px 0 0 7px;
+       }
+       nav ul li:last-child{
+        border-radius: 0 7px 7px  0;
+       }
+    </style>
+</head>
+<body>
+    <h1>skewed Menu bar</h1>
+    <nav>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Price</a></li>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
