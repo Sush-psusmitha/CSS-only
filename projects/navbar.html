@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', 'sans-serif';
+            }
+
+            .navbar{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: darkslateblue;
+            }
+            .logo{
+               color: goldenrod;
+               font-weight: 500;
+               font-size: 20px;
+               margin: 8px;
+            }
+           .nav-links ul{
+            display: flex;
+           }
+           .nav-links ul li{
+            list-style: none;
+           }
+           .nav-links ul li a{
+            color: white;
+            text-decoration: none;
+            padding: 16px;
+            display: block;
+           }
+           .nav-links ul li:hover{
+            background-color: goldenrod;
+           }
+
+          .btn{
+            width: 30px;
+            height: 22px;
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .bar{
+            height: 3px;
+            width: 100%;
+            background-color: white;
+          }
+         
+          @media(max-width:600px){
+          .btn{
+            display: flex;
+          }
+          .nav-links{
+            width: 100%;
+            display: none;
+          }
+          .navbar{
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .navbar ul{
+            flex-direction: column;
+            width: 100%;
+          }
+          
+          .nav-links ul li {
+              text-align: center;
+          }
+          .nav-links.active{
+            display: flex;
+          }
+       }
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <div class="logo">Sushmitha's</div>
+         <a href="#" class="btn"> 
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+        <div class="nav-links">            
+            
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Service</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementsByClassName('btn')[0]; 
+        const navbar = document.getElementsByClassName('nav-links')[0]
+        
+        btn.addEventListener('click', () => {
+        navbar.classList.toggle('active')
+       });
+   
+   </script>
+</body>
+</html>
