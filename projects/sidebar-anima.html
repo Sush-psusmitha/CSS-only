@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated SideBar Navigation  in css</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', 'sans-serif';
+            }
+            body{
+                margin-top: 60px;
+            }
+
+            .header{
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                height: 60px;
+                width: 100%;
+                background-color: darkgoldenrod;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 10px;
+            }
+           .logo{
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+           }
+           .header button{
+            width: 50px;
+            flex-shrink: 0;
+            font-size: 20px;
+            background: none;
+            border: none;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 5px;
+
+           }
+          .bar{
+                width: 100%;
+                height: 3px;
+                background-color: white;
+                border-radius: 10px;
+            }
+
+            .links{
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                height: 100vh;
+                width: 250px;
+                background-color: white;
+
+            }
+            .link{
+               display: flex;
+               align-items: center;
+               text-decoration: none;
+               color: #333;
+               font-size: 15px;
+               font-weight: 400;
+               padding: 10px 14px;              
+            }
+            .link.active, 
+            .link:hover{
+                color: darkgoldenrod;
+                background-color: #eee;
+            }
+            .links{
+                transform: translateX(-250px);
+                transition: 0.5s;
+            }
+            .content{
+                padding: 10px;
+                text-align: justify;
+            }
+            .open .links{
+              transform: translateX(0px);
+              box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            }
+            .nav-overlay{
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 100vw;
+                background-color: rgba(0,0,0,0.2);
+                backdrop-filter: blur(2px);
+                opacity: 1;
+                visibility: hidden;
+            }
+            .open .nav-overlay{
+                visibility: visible;
+                opacity: 1;
+            }
+    </style>
+</head>
+<body>
+     <div class="header">
+     <div class="logo">Sushmitha's</div> 
+         <button class="header-btn" id="btnNav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+     </div>
+     <div class="side-nav">
+        <div class="links">
+            <a href="#" class="link active">Home</a>
+            <a href="#" class="link">About</a>
+            <a href="#" class="link">Product</a>
+            <a href="#" class="link">Contact</a>
+            <a href="#" class="link">Download</a>
+        </div>
+        <div class="nav-overlay">
+
+        </div>
+     </div>
+
+     <div class="content">
+        <h3>My Story decides destiny </h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores doloribus eos soluta doloremque eligendi cupiditate porro alias dolorem cum. Praesentium hic aperiam eaque illum id voluptas natus repellendus quidem, repudiandae reprehenderit, alias delectus ratione harum unde et velit quasi deserunt? Harum eos at quaerat ratione provident quisquam maxime? Tenetur non sequi adipisci magnam aliquam omnis suscipit consequatur, quo natus ut maxime a, quam officia! Totam odit corporis quia fugiat magni itaque rerum eligendi doloribus architecto nulla tempora atque cupiditate aliquam laborum pariatur voluptate, sequi voluptatem error ut natus sint placeat, dolorum suscipit. Accusantium atque repudiandae quasi iure! Ullam numquam adipisci, at impedit labore ratione ab laudantium hic iure provident maxime aut voluptates exercitationem, dolorum quas sed est obcaecati nihil nam, quod ipsa aspernatur iusto veniam! Deserunt numquam saepe ipsam voluptatibus accusantium voluptatum nulla iusto cum tenetur. Aspernatur consequuntur autem ipsum perferendis necessitatibus sunt architecto tempore suscipit illum excepturi nulla laudantium fugiat at et dolorum iste ipsa facilis inventore, ex, accusantium adipisci? Numquam maxime iste esse, accusantium odio corporis laboriosam fuga quae vero, facilis voluptatibus, facere porro in vel quod ad ea velit cupiditate itaque distinctio inventore voluptatem. Quaerat officia tempore debitis consequatur, quas dolor? Dolor illo, exercitationem odit soluta vel incidunt, voluptatum asperiores possimus rerum, tempore quibusdam numquam sapiente eveniet veniam sunt voluptates. Fugit, reprehenderit quisquam voluptatibus assumenda commodi cumque? Quo tenetur accusamus tempore possimus temporibus, ipsum quibusdam deserunt praesentium vel dolorem culpa quam, ipsam corrupti sequi aperiam impedit ipsa reprehenderit sapiente commodi nihil animi odit unde! Aliquam atque praesentium, obcaecati tempora ipsa dolor quos omnis eum? Assumenda, fugit quod quos nihil quo perferendis voluptatem quam a corrupti quis, vero numquam officia. Similique omnis voluptatem laboriosam assumenda a perspiciatis quam maiores odit? Est ipsa quidem voluptatum quas, ab atque nostrum saepe recusandae laudantium blanditiis iusto modi vero. Perferendis, itaque asperiores aperiam eum exercitationem earum totam deserunt fugit ullam porro neque amet officiis ipsam minima ipsum consequatur, non commodi nihil qui. Voluptas dolore autem praesentium cum, perspiciatis iste fuga repellendus labore voluptate odio vero quis ipsam? Impedit eos repudiandae minus beatae consectetur soluta dolores, incidunt, nesciunt iste ipsa, voluptates quod quis blanditiis deserunt id ea sit assumenda tempore molestiae maiores! Magni quibusdam ipsa commodi saepe illum dolorem nostrum nam deleniti, ea rem neque quaerat voluptates ipsam cupiditate eos nulla est dolores accusamus similique odit, fuga accusantium necessitatibus. Facilis, cum. Officia nostrum assumenda adipisci ullam distinctio impedit, odit autem quod vitae optio porro ut ipsam aperiam eveniet numquam ipsa harum reprehenderit dolorem quasi ipsum. Sunt rem saepe optio obcaecati ullam sed quisquam tenetur molestiae? Ad, debitis distinctio. Similique, numquam? Natus cupiditate consequuntur eligendi esse, placeat obcaecati tempora molestiae at sed repudiandae laborum tempore exercitationem cumque iure necessitatibus ratione enim eum maxime quis nam quaerat, adipisci hic corrupti culpa? Dignissimos alias, inventore saepe neque provident ipsum delectus, perferendis corrupti facilis quo vitae minima? Porro animi repellat at impedit eum molestias, soluta nostrum, cumque consectetur earum amet, dolorem dolor. Amet neque nobis optio fugit, temporibus quisquam quia qui praesentium, repudiandae dolorem laborum totam, nam nostrum illum mollitia obcaecati ad necessitatibus commodi voluptates consequatur animi. Nulla mollitia tempora unde, iste ex adipisci animi magnam. Adipisci doloremque, maiores, ab aliquid in, impedit ea dolor culpa quasi non autem ex delectus id? Ipsum quas ipsa dolorem quos cupiditate, vero libero fugit quia molestias odio, veritatis totam necessitatibus? Magni cum hic nam exercitationem sit iste dolorem! Ducimus in qui magnam nam deserunt facilis aut nisi delectus! Sint explicabo, ab illum nisi sed doloribus blanditiis numquam magnam qui? Assumenda voluptas optio dolorem dignissimos. Exercitationem quis, aut quae hic ipsa ratione voluptatibus enim, quisquam, provident optio nam id! Fuga architecto illum dolorum dolor pariatur expedita sed modi aliquid tenetur asperiores ipsa voluptatibus quod debitis labore eaque sint nulla, itaque iste aliquam dolores est nobis officia repellat nemo! Aliquid commodi recusandae illum amet ducimus quo iure quidem culpa, odio suscipit, a necessitatibus nobis voluptatum corporis praesentium reprehenderit fuga minima pariatur nam ad incidunt enim. Eaque neque iure, voluptates quo magni repudiandae cupiditate enim facilis! Quo quas, exercitationem perferendis beatae dolorem voluptatibus modi cumque veniam, incidunt odit commodi quos. Facere voluptatibus omnis laboriosam. Esse ea ex perferendis aperiam inventore nulla voluptates eligendi optio quae praesentium mollitia incidunt, unde magnam ut, deleniti sunt labore natus. Debitis labore quo velit, at iusto necessitatibus, nemo sit ipsum temporibus molestiae tempore laboriosam vitae sed officiis assumenda? Consequatur temporibus, saepe ut iure repellendus veritatis et autem voluptate, commodi quaerat minus! Quibusdam, hic. Hic earum voluptate enim quidem sunt? Tenetur debitis blanditiis quia repudiandae at consequatur, officiis consequuntur similique sunt maxime optio excepturi fugiat veniam ratione nobis obcaecati, magni illum dolorem cumque! Tempore quis nostrum magni minus nihil libero adipisci eaque quos impedit, consequatur eos, dolor alias explicabo doloribus perferendis excepturi perspiciatis? Quasi aut qui consequatur ipsa rem nobis maxime aspernatur optio eaque sint modi similique voluptatibus eius maiores reprehenderit nisi ab corporis accusantium obcaecati sapiente voluptate, sed ex delectus magnam. Earum iste eum pariatur, quas aspernatur unde tempora nostrum molestias corporis veniam totam magnam repellat nulla obcaecati voluptatum in nam vel sit! A ut eveniet aliquid tenetur perspiciatis fuga odio doloremque quas excepturi, provident inventore fugiat nemo vel nostrum nobis corporis praesentium, optio consectetur sit quos saepe. Nihil sunt minus architecto a voluptatibus odio iusto, quam autem culpa quod cupiditate! Molestias odio velit, labore ea, nesciunt explicabo eius tempora itaque quos eos quo saepe aliquam laudantium fugit inventore ipsam sunt voluptate soluta accusamus unde voluptatem illum alias? Deleniti sapiente recusandae eius quo adipisci neque libero velit perferendis, distinctio aspernatur, doloribus quidem impedit dignissimos esse eum nostrum minus ab rerum molestias commodi natus placeat porro, ex saepe. Exercitationem ut commodi fugiat perspiciatis neque. In reprehenderit quo, id hic necessitatibus corrupti labore itaque laudantium expedita eos obcaecati tenetur, at exercitationem! Minima pariatur facere, rem quas vel consectetur mollitia quaerat atque? Similique corrupti autem laboriosam error eius deserunt nulla. Quibusdam neque voluptatibus mollitia commodi! Nostrum aliquid voluptas facere temporibus repellat cumque modi et natus nulla! Neque, sed. Ex sint quis obcaecati, ab temporibus quia, nesciunt cum quo quod error aperiam.</p>
+     </div>
+
+    <script>
+      const btn = document.querySelector('#btnNav'); 
+      const sideNav = document.querySelector(".side-nav");
+      const navOverlay = document.querySelector(".nav-overlay");
+      
+        btn.addEventListener('click', () =>{
+        sideNav.classList.add("open");
+
+        navOverlay.addEventListener('click', () => {
+         sideNav.classList.remove('open');
+        })
+
+      })
+    </script>
+</body>
+</html>

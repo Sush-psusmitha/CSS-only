@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Backgroud</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+           width: 100vw;
+           height: 100vh;
+           /* background: #504f70;
+background: linear-gradient(167deg, rgba(80, 79, 112, 1) 0%, rgba(9, 9, 121, 1) 46%, rgba(0, 212, 255, 1) 100%); */
+          background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);    
+          background-size: 400% 400%;
+          animation: bg 3s ease infinite; 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        @keyframes bg {
+            0%{
+                background-position: 0%;
+            }
+            50%{
+                background-position: 100%;
+            }
+            100%{
+                background-position: 0%;
+            }
+            
+        }
+        .card{
+            width: 550px;
+            height: 300px;
+            background-color: #fdfeef;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+           border-radius: 10px;
+           font-size: 25px;
+           font-weight: 700;
+           text-align: center;
+           line-height: 300px;
+           color: #051937;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        Welcom To Colors Gradients
+    </div>
+</body>
+</html>
