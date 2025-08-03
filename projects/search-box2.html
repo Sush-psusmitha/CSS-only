@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Box 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', 'sans-serif';
+            }
+            body{
+                height: 100vh;
+                width: 100vw;
+                background-color: rgb(76, 240, 185);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .form-group{
+               width: 500px;
+               height: 60px;
+               position: relative;
+
+            }
+            .form-group .input{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 18px;
+                padding: 10px 20px;
+                border-radius: 3px;
+                border: none;
+                outline: none;
+
+            }
+            .form-group .input:focus{
+                border: 2px solid #0abebe;
+            }
+            .form-group .btn{
+                position: absolute;
+                z-index: 1;
+                width: 50px;
+                height: 100%;
+                top: 0;
+                right: 0;
+                cursor: pointer;
+                border: none;
+                background-color: #0abebe;
+                font-size: 15px;
+                color: white;
+            }
+            .form-group .btn:hover{
+                  background-color: #41caca;
+            }
+            /* btn 1 --- text will not go below the search box */
+            .btn1 .input{
+               padding-right: 80px;
+            }
+            .btn1 .btn{
+                border-radius: 0 3px 3px 0;
+            }
+
+            /* btn2 - left search box right side typing */
+            .btn2 .btn{
+                left: 0;
+                border-radius: 3px 0 0 3px;
+            }
+            .btn2 .input{
+                padding-left:70px;
+            }
+
+            /* rounded btn3 */
+            .btn3 .btn{
+                border-radius: 50%;
+                
+            }
+            .btn3 .input{
+                border-radius: 50px;
+                padding-right: 70px;
+            }
+            
+            /* rounded btn3 - left*/
+            .btn4 .btn{
+                left: 0;
+                border-radius: 50%;
+            }
+            .btn4 .input{
+                border-radius: 50px;
+                padding-left: 60px;
+            }
+
+            /* input inside  */
+
+            .btn5 .btn{
+                width:125px ;
+                height: 45px;
+                top: 8px;
+                right: 6px;
+            }
+            .btn5 .input{
+                padding-right: 140px;
+            }
+    </style>
+</head>
+<body>
+    <div class="form-group btn1">
+        <button class="btn">
+            <i class="fa fa-search"></i>
+        </button>
+        <input type="text" class="input" placeholder="Search Text..">
+    </div>
+    <div class="form-group btn2">
+        <button class="btn">
+            <i class="fa fa-search"></i>
+        </button>
+        <input type="text" class="input" placeholder="Search Text..">
+    </div>
+    <div class="form-group btn3">
+        <button class="btn">
+            <i class="fa fa-search"></i>
+        </button>
+        <input type="text" class="input" placeholder="Search Text..">
+    </div>
+    <div class="form-group btn4">
+        <button class="btn">
+            <i class="fa fa-search"></i>
+        </button>
+        <input type="text" class="input" placeholder="Search Text..">
+    </div>
+    <div class="form-group btn5">
+        <button class="btn">
+            <i class="fa fa-search"></i>
+        </button>
+        <input type="text" class="input" placeholder="Search Text..">
+    </div>
+   
+</body>
+</html>
