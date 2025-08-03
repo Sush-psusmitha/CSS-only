@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Stoke Animation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', 'sans-serif';
+            }
+            body{
+              height: 100vh;
+              width: 100vw;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+            }
+
+            .text{
+                font-size: 50px;
+                color:#4c4c4c ;
+                display: inline-block;
+                -webkit-text-stroke-width: 0px;
+                position: relative;
+            }
+
+            .text::before{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                content: attr(data-letters);
+                overflow: hidden;
+            }
+            /* from top to bottom flow */
+            .text.top:before{
+                color: blue;
+                transition: 1s ease-in-out;
+                height: 0;
+                z-index: 1;
+            }
+             .text.top:hover:before{
+                height: 100%;
+             }
+             /* ------bottom to top-------  */
+             .text.bottom{
+                color: blue;
+             }
+             .text.bottom:before{
+                z-index: 1;
+                color: #4c4c4c;
+                transition: 1s ease-in-out;
+                height: 100%;
+             }
+             .text.bottom:hover:before{
+                height: 0;
+             }
+
+             /* left to right */
+             .text.left:before{
+                 color: blue;
+                 transition: 1s ease-in-out;
+                 width: 0;
+                 z-index: 1;
+             }
+             .text.left:hover:before{
+                width: 100%;
+             }
+
+             /* right to left */
+             .text.right{
+                color: blue;
+             }
+             .text.right:before{
+                width: 100%;
+                color: #4c4c4c;
+                z-index: 1;
+                transition: 1s ease-in-out;
+             }
+             .text.right:hover:before{
+                width: 0;
+             }
+
+
+    </style>
+</head>
+<body>
+    
+    <h1 class="text top" data-letters="Sushmitha 1">Sushmitha 1</h1>
+    <h1 class="text bottom" data-letters="Sushmitha 2">Sushmitha 2</h1>
+    <h1 class="text left" data-letters="Sushmitha 3">Sushmitha 3</h1>
+    <h1 class="text right" data-letters="Sushmitha 4">Sushmitha 4</h1>
+</body>
+</html>
