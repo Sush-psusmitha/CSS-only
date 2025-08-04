@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foggy Animation</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'sans-serif';
+
+        }
+        .bg{
+            width: 100%;
+            height: 130vh;
+            background: url('../images/nature-bg.jpg');
+            background-size: cover;
+            background-position: bottom;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        #text{
+            font-size: 100px;
+            color: #fff;
+            text-transform: uppercase;
+            opacity: 0.6;
+        }
+        .fog{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .fog img{
+         position: absolute;
+         bottom: 0;
+         max-width: 100%;
+         animation: fog calc(3s * var(--i)) ease-in infinite;
+        }
+
+       @keyframes fog {
+        0%{
+            opacity: 0;
+            transform: scale(1);
+        }
+        25%,75%{
+            opacity: 1;
+
+        }
+        100%{
+            transform: scale(3);
+            opacity: 0;
+        }
+       } 
+    </style>
+
+</head>
+<body>
+    <div class="bg">
+        <h2 id="text">Sushmitha</h2>
+        <div class="fog">
+            <img src="../images/fog1.png" style="--i:1;">
+            <img src="../images/fog2.png" style="--i:2;">
+            <img src="../images/fog3.png" style="--i:3;">
+            <img src="../images/fog4.png" style="--i:4;">
+            <img src="../images/fog5.png" style="--i:5;">
+            <img src="../images/fog1.png" style="--i:10;">
+            <img src="../images/fog2.png" style="--i:9;">
+            <img src="../images/fog3.png" style="--i:8;">
+            <img src="../images/fog4.png" style="--i:7;">
+            <img src="../images/fog5.png" style="--i:6;">
+        </div>
+    </div>
+
+    <script>
+        // text zooming
+        let text = document.getElementById("text"); 
+        
+        window.addEventListener('scroll',
+         function(){
+           let value = window.scrollY; 
+           text.style.fontSize = value*1 + "px";
+         });
+    </script>
+</body>
+</html>
