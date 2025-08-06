@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Cards</title>
+
+    <style>
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+       }
+       html{
+        text-align: center;
+       }
+       body{
+         padding: min(50px, 7%);
+         background-color: rgb(123, 80, 166);
+       }
+       h1{
+        margin: 30px auto;
+       }
+       .card{
+        padding: 2rem;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        background-color: rgb(255, 217, 0);
+        text-align: center;
+       }
+        .card .card-logo{
+            margin: 0.5rem;
+        }
+       .grid-container{
+        display: grid;
+        border: 1px solid red;
+        gap: 15px;
+        grid-template-columns: repeat(4,200px);
+        /* instead 4 we give auto-fit browser it self decide the how many columns responsivly, 
+         instead of fixed height like 200px, we can give minmax( min(300) , max(1fr) )
+        */
+        grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+        justify-content: center;
+       }
+       h2{
+        padding: 5px;
+       }
+       .card .card-top{
+         display: flex;
+         flex-direction:row;
+         align-items: center;
+         justify-content: center;
+         text-align: left;
+         gap: 1rem;
+         padding: 0.5rem;
+       }
+       .card-top img{
+        width: 70px;
+        height: 70px;
+        flex-shrink: 0;
+       }
+       .card-top h2{
+        flex: 1;
+        white-space: normal;
+       }
+    </style>
+</head>
+<body>
+     <h1>Responsive Grid Cards</h1>
+
+     <div class="grid-container">
+        <div class="card">
+            <div class="card-logo">
+                <img src="../images/e-mail-services.webp" alt="Email">
+            </div>
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, ipsam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+             <div class="card-logo">
+                <img src="../images/enhanced-engagement.webp" alt="Email">
+            </div>
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+             <div class="card-logo">
+                <img src="../images/cloud-managed-hosting.webp" alt="Email">
+            </div>
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+             <div class="card-logo">
+                <img src="../images/cloud-managed-hosting.webp" alt="Email">
+            </div>
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+             <div class="card-logo">
+                <img src="../images/training-support.webp" alt="Email">
+            </div>
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+            <div class="card-top">
+                <img src="../images/e-mail-services.webp" alt="">
+                <h2>Attendance Management</h2>
+            </div>         
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+            <div class="card-top">
+                <img src="../images/e-mail-services.webp" alt="">
+                <h2>Attendance Management</h2>
+            </div>         
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+            <div class="card-top">
+                <img src="../images/e-mail-services.webp" alt="">
+                <h2>Attendance Management</h2>
+            </div>         
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+            <div class="card-top">
+                <img src="../images/e-mail-services.webp" alt="">
+                <h2>Attendance Management</h2>
+            </div>         
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+        <div class="card">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reprehenderit, facilis temporibus omnis in corporis!</p>
+        </div>
+     </div>
+</body>
+</html>
