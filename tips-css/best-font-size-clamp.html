@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clamp Font Size Table</title>
+  <style>
+
+
+:root {
+  --fs-h1: clamp(2.5rem, calc(4vw + 1rem), 4rem);
+  --fs-h2: clamp(2rem, 4vw, 3rem);
+  --fs-h3: clamp(1.5rem, 3vw, 2.25rem);
+  --fs-h4: clamp(1.25rem, 2.5vw, 2rem);
+  --fs-h5: clamp(1.125rem, 2vw, 1.5rem);
+  --fs-h6: clamp(1rem, 1.75vw, 1.25rem);
+  --fs-body: clamp(1rem, 1.5vw, 1.25rem);
+  --fs-small: clamp(0.875rem, 1vw, 1rem);
+}
+/* can also use like this */
+/* h1 {
+  font-size: var(--fs-h1);
+}
+p {
+  font-size: var(--fs-body);
+} */
+
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+      font-weight: bold;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Clamp Font Size Recommendations</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Element</th>
+        <th>CSS <code>clamp()</code> Recommendation</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>h1</code></td>
+        <td><code>calc(4vw + 1rem)</code></td>
+        <td>Main headings – big and bold</td>
+      </tr>
+      <tr>
+        <td><code>h2</code></td>
+        <td><code>clamp(2rem, calc(4vw + 1rem), 3rem)</code></td>
+        <td>Section headings</td>
+      </tr>
+      <tr>
+        <td><code>h3</code></td>
+        <td><code>clamp(1.5rem, 3vw, 2.25rem)</code></td>
+        <td>Sub-section headings</td>
+      </tr>
+      <tr>
+        <td><code>h4</code></td>
+        <td><code>clamp(1.25rem, 2.5vw, 2rem)</code></td>
+        <td>Smaller headers</td>
+      </tr>
+      <tr>
+        <td><code>h5</code></td>
+        <td><code>clamp(1.125rem, 2vw, 1.5rem)</code></td>
+        <td>Minor headers</td>
+      </tr>
+      <tr>
+        <td><code>h6</code></td>
+        <td><code>clamp(1rem, 1.75vw, 1.25rem)</code></td>
+        <td>Smallest header</td>
+      </tr>
+      <tr>
+        <td><code>p</code></td>
+        <td><code>clamp(1rem, 1.5vw, 1.25rem)</code></td>
+        <td>Body text</td>
+      </tr>
+      <tr>
+        <td><code>li</code></td>
+        <td><code>clamp(1rem, 1.25vw, 1.125rem)</code></td>
+        <td>List items</td>
+      </tr>
+      <tr>
+        <td><code>a</code></td>
+        <td><code>clamp(1rem, 1.25vw, 1.25rem)</code></td>
+        <td>Links – legible and accessible</td>
+      </tr>
+      <tr>
+        <td><code>small</code></td>
+        <td><code>clamp(0.875rem, 1vw, 1rem)</code></td>
+        <td>Footnotes, disclaimers</td>
+      </tr>
+      <tr>
+        <td><code>button</code></td>
+        <td><code>clamp(1rem, 1.5vw, 1.25rem)</code></td>
+        <td>CTA buttons, good tap size</td>
+      </tr>
+      <tr>
+        <td><code>.caption</code></td>
+        <td><code>clamp(0.75rem, 1vw, 0.875rem)</code></td>
+        <td>Image captions or small notes</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

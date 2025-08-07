@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Font Size</title>
+
+    <style>
+   body{
+    color: bisque;
+    background-color: black;
+    text-align: center;
+   }
+   h1{
+    /* font-size: clamp(2rem, calc(6vw + 1rem), 4rem); */
+    font-size: clamp(2.5rem, calc(4vw + 1rem), 4rem);
+   }
+    </style>
+</head>
+<body>
+<!-- clamp(min, preferred, max): A CSS function that sets a value which:
+Never goes below min
+Never exceeds max
+Grows/shrinks between min and max based on the preferred value (here: calc(6vw + 1rem)) -->
+    <h1>Big Heading</h1>
+
+    <p>clamp(min, preferred, max) - font size responsive</p>
+    <br>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut obcaecati expedita 
+        eaque odit aspernatur cupiditate labore aliquam corrupti ipsa impedit pariatur optio ullam cum error, in qui reiciendis
+         repellendus voluptatibus magni vitae. Animi, magni? Reprehenderit culpa asperiores illo, ipsa aspernatur vitae itaque rem perspiciatis
+          ducimus atque magni recusandae voluptatibus eaque voluptas iste. Sapiente optio deserunt sunt adipisci aut doloribus eum commodi ad laborum voluptas exercitationem modi ratione iste, quisquam veniam dolor? Tenetur perspiciatis eum, libero, asperiores earum mollitia rem deleniti optio nemo ratione, ab unde velit illo laboriosam? Sint recusandae id maxime distinctio, ullam dicta quod repellat odio laboriosam esse?</p>
+          
+    </body>
+</html>

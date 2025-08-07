@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 50vh;
+            width: 100vw;
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+             text-align: center;
+            justify-content: center;
+        }
+        .container{
+          max-width: 800px;
+          border-radius: 10px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          padding: 6rem;
+          margin: 2rem;
+        }
+        @media (max-width:700px){
+            .container{
+                padding: 2rem;
+            }
+        }
+        .container{
+            padding: min(3rem, 10%);
+           
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>padding: min(3rem, 10%);</h2>
+        <p>"Give the .container some space inside it (padding), but never let it be more than 3rem or more than 10% of the container's width — whichever is smaller at the moment."</p>
+    </div>
+</body>
+</html>

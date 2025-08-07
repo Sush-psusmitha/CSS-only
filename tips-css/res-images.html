@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+   <style>
+     img{
+        max-width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+        /* aspect-ratio: 1/1; */
+        /* aspect-ratio: 16/9; */
+        /* aspect-ratio: 9/16; */
+     }
+     .responsive-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+   </style>
+</head>
+<body>
+    <!-- aspect ratios: 1/1, 16/9, 9/16 -->
+    <img src="/img/for-student-portal-benefits.png" height="400" width="650"  alt="">
+
+    <!-- ✅ 1. CSS: Use max-width: 100%; height: auto; -->
+    <img src="img/for-student-portal-benefits.png" alt="Description" style="max-width: 100%; height: auto;">
+
+    <!-- Wrap images in flexible containers: -->
+   <div class="responsive-container">
+  <img src="img/for-student-portal-benefits.png" alt="Nice view" style="max-width: 100%; height: auto;">
+</div>
+
+</body>
+</html>
